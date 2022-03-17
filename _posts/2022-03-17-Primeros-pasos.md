@@ -3,7 +3,7 @@ title: Primeros pasos
 published: true
 ---
 
-# [](#header-1)De qué va esto
+# [](#header-2)De qué va esto
 
 Llevo poco tiempo informandome sobre el Pentesting, pero creo que puedo dar una definición acertada de lo que es. Se trata de encontrar vulnerabilidades en una máquina y aprovecharlas para manipularla o extraer información de ella. 
 
