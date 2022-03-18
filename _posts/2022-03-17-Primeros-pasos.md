@@ -26,7 +26,7 @@ Para reconocer los dispositivos de la red y ver que sistema operativo usan, he v
 
 Para la fase de explotación, una herramienta muy útil es MetaSploit, aunque automatiza demasiado todos los procesos y tal vez no sea la mejor opción para aprender.
 
-GoBuster o Dirbuster son útiles cuando nos interesa ver directorios de una página web donde tal vez halla más oportunidades para tomar el control de la máquina. 
+GoBuster o Dirbuster son útiles cuando nos interesa ver directorios de una página web donde tal vez haya más oportunidades para tomar el control de la máquina. 
 
 Una herramienta muy usada también es NetCat, que permite poner en escucha al cliente por un puerto que le indiques. He visto que se suele usar cuando se quiere hacer una reverse shell, ya sea con php o con python. 
 
