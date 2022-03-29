@@ -49,7 +49,7 @@ get
 ```
 smbclient \\\\$IP\\WorkShares  
 ls  
-cd James.P  
+cd James.P 
 ls  
 get flag.txt 
 ```
