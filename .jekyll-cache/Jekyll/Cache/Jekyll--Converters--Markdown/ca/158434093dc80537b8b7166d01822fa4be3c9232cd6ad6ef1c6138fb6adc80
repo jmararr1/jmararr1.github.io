@@ -1,0 +1,56 @@
+I"ª<p>Jorge Marco Arr√°ez</p>
+
+<h3 id="1--what-does-the-3-letter-acronym-smb-stand-for"><a href="#header-3"></a>1- What does the 3-letter acronym SMB stand for?</h3>
+
+<p>Server Message Block</p>
+
+<h3 id="2--what-port-does-smb-use-to-operate-at"><a href="#header-3"></a>2- What port does SMB use to operate at?</h3>
+
+<p>445</p>
+
+<h3 id="4--what-network-communication-model-does-smb-use-architecturally-speaking"><a href="#header-3"></a>4- What network communication model does SMB use, architecturally speaking?</h3>
+
+<p>client-server model</p>
+
+<ol>
+  <li>What is the service name for port 445 that came up in our nmap scan?</li>
+</ol>
+
+<p>nmap -A -sCV -vv -T4 -n -p 445 -oN nmap/port445 $IP</p>
+
+<p>microsoft-ds</p>
+
+<ol>
+  <li>What is the tool we use to connect to SMB shares from our Linux distribution?</li>
+</ol>
+
+<p>smbclient</p>
+
+<ol>
+  <li>What is the <code class="language-plaintext highlighter-rouge">flag</code> or <code class="language-plaintext highlighter-rouge">switch</code> we can use with the SMB tool to <code class="language-plaintext highlighter-rouge">list</code> the contents of the share?</li>
+</ol>
+
+<p>-l</p>
+
+<ol>
+  <li>What is the name of the share we are able to access in the end?</li>
+</ol>
+
+<p>smbclient -L $IP</p>
+
+<ol>
+  <li>What is the command we can use within the SMB shell to download the files we find?</li>
+</ol>
+
+<p>get</p>
+
+<ol>
+  <li>Submit root flag</li>
+</ol>
+
+<p>smbclient \\$IP\WorkShares
+ls
+cd James.P
+ls
+get flag.txt</p>
+:ET

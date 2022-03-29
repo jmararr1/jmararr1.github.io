@@ -1,0 +1,89 @@
+I"�<p>Segunda máquina en HackTheBox</p>
+
+<h2 id="procedimiento"><a href="#header-4"></a>Procedimiento</h2>
+
+<p>IP máquina: 10.129.245.20
+export IP=10.129.245.20</p>
+
+<ol>
+  <li>What does the 3-letter acronym FTP stand for?</li>
+</ol>
+
+<ul>
+  <li>file transfer protocol</li>
+</ul>
+
+<ol>
+  <li>What communication model does FTP use, architecturally speaking?</li>
+</ol>
+
+<ul>
+  <li>client-server model</li>
+</ul>
+
+<ol>
+  <li>What is the name of one popular GUI FTP program?</li>
+</ol>
+
+<ul>
+  <li>filezilla</li>
+</ul>
+
+<ol>
+  <li>Which port is the FTP service active on usually?</li>
+</ol>
+
+<ul>
+  <li>21 tcp</li>
+</ul>
+
+<ol>
+  <li>What acronym is used for the secure version of FTP?</li>
+</ol>
+
+<ul>
+  <li>sftp</li>
+</ul>
+
+<ol>
+  <li>What is the command we can use to test our connection to the target?</li>
+</ol>
+
+<ul>
+  <li>ping</li>
+</ul>
+
+<ol>
+  <li>From your scans, what version is FTP running on the target?</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap -Pn -A  -sV -p 21 -oN nmap/initial $IP
+</code></pre></div></div>
+
+<ul>
+  <li>vsftpd 3.0.3</li>
+</ul>
+
+<ol>
+  <li>From your scans, what OS type is running on the target?</li>
+</ol>
+
+<ul>
+  <li>unix</li>
+</ul>
+
+<ol>
+  <li>Obtain the root flag</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftp $IP
+anonymous
+whatever
+ls
+get flag.txt
+</code></pre></div></div>
+
+<ul>
+  <li>035db21c881520061c53e0536e44f815</li>
+</ul>
+:ET

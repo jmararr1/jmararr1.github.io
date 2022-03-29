@@ -1,0 +1,87 @@
+I"�<p>Primera máquina en HackTheBox</p>
+
+<h2 id="procedimiento"><a href="#header-4"></a>Procedimiento</h2>
+
+<p>IP máquina: 10.129.245.20
+export IP=10.129.245.20</p>
+
+<ol>
+  <li>What does the acronym VM stand for?</li>
+</ol>
+
+<ul>
+  <li>Virtual Machine</li>
+</ul>
+
+<ol>
+  <li>What tool do we use to interact with the operating system in order
+to start our VPN connection?</li>
+</ol>
+
+<ul>
+  <li>terminal</li>
+</ul>
+
+<ol>
+  <li>What service do we use to form our VPN connection?</li>
+</ol>
+
+<ul>
+  <li>openvpn</li>
+</ul>
+
+<ol>
+  <li>What is the abreviated name for a tunnel interface in the output of your VPN boot-up sequence output?</li>
+</ol>
+
+<ul>
+  <li>tun</li>
+</ul>
+
+<ol>
+  <li>What tool do we use to test our connection to the target?</li>
+</ol>
+
+<ul>
+  <li>ping</li>
+</ul>
+
+<ol>
+  <li>What is the name of the tool we use to scan the target’s ports?</li>
+</ol>
+
+<ul>
+  <li>nmap</li>
+</ul>
+
+<ol>
+  <li>What service do we identify on port 23/tcp during our scans?</li>
+</ol>
+
+<ul>
+  <li>telnet</li>
+</ul>
+
+<ol>
+  <li>What username ultimately works with the remote management login prompt for the target?</li>
+</ol>
+
+<ul>
+  <li>root</li>
+</ul>
+
+<ol>
+  <li>Submit root flag</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>telnet $IP
+meow login: root
+ls
+cat flag.txt
+</code></pre></div></div>
+
+<ul>
+  <li>b40abdfe23665f766f9c61ecba8a4c19</li>
+</ul>
+
+:ET

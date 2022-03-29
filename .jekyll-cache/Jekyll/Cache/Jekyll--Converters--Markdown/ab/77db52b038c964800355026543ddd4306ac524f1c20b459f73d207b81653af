@@ -1,0 +1,83 @@
+I"�<p>Jorge Marco Arráez
+2022-03-29
+Máquina Appointment HackTheBox</p>
+
+<ul>
+  <li>export IP=10.129.231.70</li>
+</ul>
+
+<ol>
+  <li>What does the acronym SQL stand for?</li>
+</ol>
+
+<p>Structured Query Language</p>
+
+<ol>
+  <li>What is one of the most common type of SQL vulnerabilities?</li>
+</ol>
+
+<p>SQL injection</p>
+
+<ol>
+  <li>What does PII stand for?</li>
+</ol>
+
+<p>Personally Identifiable Information</p>
+
+<ol>
+  <li>What does the OWASP Top 10 list name the classification for this vulnerability?</li>
+</ol>
+
+<p>A03:2021-Injection</p>
+
+<ol>
+  <li>What service and version are running on port 80 of the target?</li>
+</ol>
+
+<p>nmap -A -sCV -vv -T4 -n -oN nmap/ports $IP</p>
+
+<p>Apache httpd 2.4.38 ((Debian))</p>
+
+<ol>
+  <li>What is the standard port used for the HTTPS protocol?</li>
+</ol>
+
+<p>443</p>
+
+<ol>
+  <li>What is one luck-based method of exploiting login pages?</li>
+</ol>
+
+<p>brute-forcing</p>
+
+<ol>
+  <li>What is a folder called in web-application terminology?</li>
+</ol>
+
+<p>directory</p>
+
+<ol>
+  <li>What response code is given for “Not Found” errors?</li>
+</ol>
+
+<p>404</p>
+
+<ol>
+  <li>What switch do we use with Gobuster to specify we’re looking to discover directories, and not subdomains?</li>
+</ol>
+
+<p>dir</p>
+
+<ol>
+  <li>What symbol do we use to comment out parts of the code?</li>
+</ol>
+
+<p>’#’</p>
+
+<ol>
+  <li>Submit root flag</li>
+</ol>
+
+<p>e3d0796d002a446c0e622226f42e9672</p>
+
+:ET

