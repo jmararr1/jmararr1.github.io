@@ -5,11 +5,12 @@ published: true
 
 Jorge Marco Arráez
 
-He estado unos dias intentando la máquina Timelapse, pero he llegado a un punto en el que me he estancado. Tengo que aprender como usar las debilidades de winrm para poder continuar. Mientras tanto, continuo con el starting point que ya estoy empezando la fase 2.
+He estado unos días intentando la máquina Timelapse, pero he llegado a un punto en el que me he estancado. Tengo que aprender como usar las debilidades de winrm para poder continuar. Mientras tanto, continúo con el starting point que ya estoy empezando la fase 2.
 
 ## [](#header-3) 1)   How many TCP ports are open on the machine? 
 
-Con el parámero -sS le digo que haga un escaneo TCP/SYN porque al ser una máquina windows agiliza el proceso, con -n le indico que no quiero que haga resolución por dns para que vaya más rápido, con min-rate especifico la minima cantidad de paquetes que quiero que emita por segundo. -p- es para que escanee todos los puertos y -Pn para que detecte la máquina si o sí.
+Con el parámero -sS le digo que haga un escaneo TCP/SYN porque al ser una máquina windows agiliza el proceso, con -n le indico que no quiero que haga resolución por dns para que vaya más rápido, con min-rate especifico la mínima cantidad de paquetes que quiero que emita por segundo. 
+-p- es para que escanee todos los puertos y -Pn para que detecte la máquina si o sí.
 ```
 nmap -sS -n --min-rate 5000 -p- -Pn $IP
 ```
@@ -18,7 +19,7 @@ nmap -sS -n --min-rate 5000 -p- -Pn $IP
 
 ## [](#header-3) 2)    When visiting the web service using the IP address, what is the domain that we are being redirected to? 
 
-He tenido que editar el archivo /etc/hosts porque se estaba aplicando virtual hosting, con añadir "$IP  unika.htb" ya he podido acceder a la página
+He tenido que editar el archivo /etc/hosts porque se estaba aplicando virtual hosting, con añadir "$IP  unika.htb" ya he podido acceder a la página.
 
 unika.htb
 
