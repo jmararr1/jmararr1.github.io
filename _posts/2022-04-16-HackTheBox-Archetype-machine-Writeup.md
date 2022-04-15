@@ -44,42 +44,8 @@ sudo nmap -sCV --min-rate 5000 -A -vvv -Pn -n -p 1433,139,445 -oN mainports $IP
 | Not valid after:  2052-04-15T14:07:35
 | MD5:   01b1 a439 ed24 1acd b23c 0a93 5f56 d65d
 | SHA-1: ef69 46fa 4758 c842 b313 2728 1f41 4aa6 73f0 a0e5
-| -----BEGIN CERTIFICATE-----
-| MIIDADCCAeigAwIBAgIQGzLxzutu+6dLyMwyyeSkLTANBgkqhkiG9w0BAQsFADA7
-| MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA
-| bABsAGIAYQBjAGswIBcNMjIwNDE1MTQwNzM1WhgPMjA1MjA0MTUxNDA3MzVaMDsx
-| OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs
-| AGwAYgBhAGMAazCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANDjzKgx
-| GKa5btbf7BR8mb/CfGwzyQRatfk7voA+KYjsB4Nc/VOu1LGIkLwLqJhFnP0tzZR2
-| gW2NWRSvmhDwuwuOkm6RoiW0B60C4jljS1cctF3RklJz48Rk891rDW+R+3/fOarQ
-| gsDQSYQEs4H3akGraIc8DUbFotmFaxpMFa2OjnL5kzh/CXbWlCbALFn6ST5QwhLC
-| RHDJZkytuVCYrJhnmb+R6HQssCxKOdO0jIhIyjUinDjyBjnolrLmJt3XbeCYvWiu
-| Bw10ZuIzPeKGExnA+7rcRyeSTdo0uMAQN/lvVHrrrI2OFVLfZ4nlqIsF7zagI7Iy
-| zsBtCRE5Ib2awpECAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAnXov6WHCrwyk8HFK
-| uHpFRQDlTLxves6xgZTMjUvuqn+LoCJXz/pYq5N/pgefmjSqPOdR2l4J1ezHaQxI
-| BzGqtKQSgqqye9WjxAMNgcl1XZSPZdw0G9DIjnRnpwo2ME41FuVO0anGJ0CzLKL5
-| XxH4s48k1G4OxyZ9TaTLu2Q/XOkpYnUhSZmJvooT0rj9DBABOokYRzhCAVrSWmYp
-| 2vJvOopeDfSmAqDjS23dGPbVB8ClvtIn/rf0Uuv/sLB2HDIKJw5490ka72FdXoRq
-| tQSlHLefup52BFZvZDYFbQcGayAI2+KdH7Na3vE5yDv0QSshiIgaqjWsDsqwPG2+
-| WDvpoA==
-|_-----END CERTIFICATE-----
+|
 |_ssl-date: 2022-04-15T14:17:15+00:00; 0s from scanner time.
-Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
-Device type: general purpose
-Running: Microsoft Windows XP|7|2012
-OS CPE: cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_server_2012
-OS details: Microsoft Windows XP SP3, Microsoft Windows XP SP3 or Windows 7 or Windows Server 2012
-TCP/IP fingerprint:
-OS:SCAN(V=7.92%E=4%D=4/15%OT=139%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=62597E6B%P=x
-OS:86_64-pc-linux-gnu)SEQ(SP=FF%GCD=1%ISR=107%TI=I%II=I%SS=S%TS=U)OPS(O1=M5
-OS:B4%O2=M5B4%O3=M5B4%O4=M5B4%O5=M5B4%O6=M5B4)WIN(W1=FAF0%W2=FAF0%W3=FAF0%W
-OS:4=FAF0%W5=FAF0%W6=FAF0)ECN(R=Y%DF=N%TG=80%W=FAF0%O=M5B4%CC=N%Q=)T1(R=Y%D
-OS:F=N%TG=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=N%TG=80%W=FAF0%S=O%A=S+
-OS:%F=AS%O=M5B4%RD=0%Q=)T4(R=Y%DF=N%TG=80%W=7FFF%S=A%A=Z%F=R%O=%RD=0%Q=)T6(
-OS:R=Y%DF=N%TG=80%W=7FFF%S=A%A=Z%F=R%O=%RD=0%Q=)U1(R=N)IE(R=Y%DFI=N%TG=80%C
-OS:D=Z)
-
-no sé si puedo usar el certificado para algo, diría que no, que únicamente sirve para autenticar el servicio.
 
 
 el puerto que buscamos es el 1433
