@@ -30,12 +30,12 @@ La página web es la siguiente:
 ## [](#header-3) 2)    This service can be configured to allow login with any password for specific username. What is that username?
 
 
-Como ya hemos visto en máquinas anteriores, ftp permite registrarse sin contraseña al usuario "anonymous".
+Como ya hemos visto en máquinas anteriores, FTP permite registrarse sin contraseña al usuario "anonymous".
 
 
 ## [](#header-3) 3)  What is the name of the file downloaded over this service?
 
-al conectarme con ftp, veo que usa la versión vsFTPd 3.0.3
+Al conectarme con FTP, veo que usa la versión vsFTPd 3.0.3
 
 ```
 username = "anonymous"
@@ -45,7 +45,7 @@ get backup.zip
 
 ## [](#header-3) 4) What script comes with the John The Ripper toolset and generates a hash from a password protected zip archive in a format to allow for cracking attempts?
 
-![texto_alternativo](../assets/capturas_maquinas/vaccine/2-john.png){width=width height=height}
+![texto_alternativo](../assets/capturas_maquinas/vaccine/2-john.png)
 
 ```
 zip2john backup.zip > hash.txt
@@ -54,8 +54,10 @@ john -w=/home/jorge/Descargas/rockyou.txt hash.txt
 john --show 
 ```
 
-la contraseña es: 741852963
-
+La contraseña es: 
+```
+741852963
+```
 
 ## [](#header-3) 5)  What is the password for the admin user on the website?
 
@@ -122,8 +124,10 @@ cat dashboard.php
 
 ![texto_alternativo](../assets/capturas_maquinas/vaccine/11-dashboardphp.png)
 
+```
 username=postgres
 password=P@s5w0rd!
+```
 
 Podemos usar esas credenciales para establecer una sesión ssh.
 
@@ -141,7 +145,7 @@ Puede ejecutar /bin/vi para editar el archivo pg_hba.conf
 
 Busco en internet y encuentro la siguiente página:
 
-<a href="https://gtfobins.github.io/gtfobins/vi/#sudo">
+https://gtfobins.github.io/gtfobins/vi/#sudo
 
 Al añadir las líneas especificadas en la sección shell b):
 
