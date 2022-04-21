@@ -50,9 +50,6 @@ Pruebo a ver si puedo iniciar sesión con Wubbalubbadubdub como contraseña y as
 
 ![commandpannel](../assets/capturas_maquinas/THM/picklerick/6-commandpanel.png)
 
-*   no se que fase va ahora
-
-
 Inspeccionando la página del panel de comandos veo que vuelve a haber un comentario, este acaba en ==, lo que me hace pensar que puede estar codificado en base64, ya que así es como se ve el padding. Tras pasarlo varias veces por un decodificador de base64 obtengo el siguiente resultado.
 
 ![rabbithole](../assets/capturas_maquinas/THM/picklerick/7-rabbithole.png)
@@ -81,7 +78,7 @@ Con sudo -l veo que puedo ejecutar cualquier comando, así que trato de obtener 
 
 Estamos dentro. 
 
-### [](#header-3)   5. Explotación
+### [](#header-3)   4. Explotación
 
 Tras estabilizar la shell con:
 
@@ -96,7 +93,7 @@ Puedo a acceder a /home/rick y allí veo el segundo ingrediente.
 
 Veo que hay un directorio /root, pero no puedo acceder si no soy root.
 
-### [](#header-3)   6. Escalada
+### [](#header-3)   5. Escalada
 
 Como puedo ejecutar todos los comandos, pruebo sudo /bin/bash y da resultado. 
 Ahora solo tengo que navegar a la carpeta /root y ya tengo el tercer ingrediente.
