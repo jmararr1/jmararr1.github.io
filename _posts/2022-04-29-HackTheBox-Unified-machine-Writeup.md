@@ -66,8 +66,6 @@ db.admin.insert()
 
 db.admin.update()
 
-db.admin.insert({ "email": "jorge@localhost.local", "last_site_name": "default", "name": "jorge", "time_created": NumberLong(100019800), "x_shadow" : "$6$ggsKpv0PPrzD7PB8$AmCSnnfzfBBjXtrXjaoI4uv5ZkC3ZqPwkepn8xDGfSudlREUDwlSAc7qkVX9tWQjLOY3u8OzF2OqBpxAKVxY0/"})
-
 ## [](#header-3) 14)  What is the password for the root user? 
 
 NotACrackablePassword4U2022
@@ -80,6 +78,6 @@ user=6ced1a6a89e666c0620cdb10262ba127
 ## [](#header-3) 16)  Submit root flag 
 
 ```
-e50bc93c75b634e4b272d2f771c33681
+root=e50bc93c75b634e4b272d2f771c33681
 ```
 
