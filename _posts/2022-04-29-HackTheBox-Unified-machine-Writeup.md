@@ -2,7 +2,7 @@
 title: Unified [HTB]
 image: https://www.hackthebox.com/storage/avatars/525ba0e35574d9240e878bb8c716661e.png
 tags: [HTB,Starting point]
-published: true
+published: false
 ---
 
 Jorge Marco Arráez
