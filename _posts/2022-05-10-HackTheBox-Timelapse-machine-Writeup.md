@@ -116,4 +116,4 @@ Timelapse es la primera máquina de dificultad Easy que hago de HackTheBox. He t
 
 He aprendido mucho de LAPS y he aprendido a enumerar usuarios en Windows y a manejar la herramienta evil-winrm, así como john y fcrackzip. 
 
-![pwn](../assets/capturas_maquinas/THM/picklerick/pwn.png)
+![pwn](../assets/capturas_maquinas/HTB/timelapse/pwn.png)
