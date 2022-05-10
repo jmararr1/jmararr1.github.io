@@ -1,14 +1,16 @@
 ---
 title: Timelapse [HTB]
 published: true
-image: https://www.hackthebox.com/storage/avatars/bae443f73a706fc8eebc6fb740128295.png
+image: (https://www.hackthebox.com/storage/avatars/bae443f73a706fc8eebc6fb740128295.png)
 ---
 
 Jorge Marco Arráez
 
 ### [](#header-3)   1. Reconocimiento
 
-![scan-nmap](../assets/capturas_maquinas/THM/picklerick/3-nmap.png)
+```
+nmap -n -Pn --min-rate 5000 -sCV 10.10.11.152
+```
 
 Puertos abiertos:
 
