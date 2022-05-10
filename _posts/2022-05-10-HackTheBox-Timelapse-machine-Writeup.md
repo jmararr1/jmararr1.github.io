@@ -4,7 +4,7 @@ published: true
 ---
 
 Jorge Marco Arráez
-![smbclient](../assets/capturas_maquinas/HTB/timelapse/timelapse.pngpng)
+![smbclient](../assets/capturas_maquinas/HTB/timelapse/timelapse.png)
 ### [](#header-3)   1. Reconocimiento
 
 ```
