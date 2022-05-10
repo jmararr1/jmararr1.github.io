@@ -1,7 +1,7 @@
 ---
 title: Timelapse [HTB]
 published: true
-image: (https://www.hackthebox.com/storage/avatars/bae443f73a706fc8eebc6fb740128295.png)
+image: ![imagen-timelapse](https://www.hackthebox.com/storage/avatars/bae443f73a706fc8eebc6fb740128295.png)
 ---
 
 Jorge Marco Arráez
