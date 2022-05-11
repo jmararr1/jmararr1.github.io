@@ -75,11 +75,11 @@ Ya puedo obtener la flag de user.
 
 ![user](../assets/capturas_maquinas/HTB/timelapse/usertxt.png)
 
-Para terminar de ver que puedo hacer como usuario, hago una enumeración básica de Windows.
+Para terminar de ver qué puedo hacer como usuario, hago una enumeración básica de Windows.
 
 ![user](../assets/capturas_maquinas/HTB/timelapse/net-user.png)
 
-Puedo ver que usuarios existen en la máquina.
+Puedo ver qué usuarios existen en la máquina.
 
 ### [](#header-3)   5. Escalada
 
