@@ -82,6 +82,8 @@ Al ejecutarlo no consigo hacerme administrador, pero me reporta una vulnerabilid
 CVE-2021-3560
 ```
 
+El exploit consiste en ejecutar comandos para crear un usuario con permisos root. Estos requieren permisos de super-usuario pero terminándolos a los pocos milisegundos se consigue que la máquina los acepte y los ejecute.
+
 Haciendo uso de ella, creo un usuario con permisos root y establezco su contraseña. 
 
 ![17-root](../assets/capturas_maquinas/HTB/paper/17-root.png)
